@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@NoArgsConstructor // provide default constructor // why this annotation is class level , why not properties level?
+@NoArgsConstructor // provide default constructor
 @Getter
 @Setter
 @ToString

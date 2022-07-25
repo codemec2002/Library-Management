@@ -31,6 +31,12 @@ public class BookController {
         return bookService.getBookById(id);
     }
 
+    @DeleteMapping("/deleteRecord")
+    public String deleteRecord(@RequestParam(value = "id") int id) throws SQLException {
+         bookService.deleteBookById(id);
+         return "Book deleted with id "+id;
+    }
+
     @PostMapping("/createTable/{table_name}")
     public String createTable(@PathVariable String table_name) throws SQLException {
         return bookService.createTable(table_name);

@@ -102,4 +102,14 @@ public class BookRepository {
     }
 
 
+    public void deleteById(int id) throws SQLException {
+        getConnection();
+
+        Statement statement = connection.createStatement();
+        Book book = getBookById(id);
+        if(book == null)
+            return;
+        int resultSet = statement.executeUpdate("DELETE FROM " + table_name + " t where t.id = " + book.getId());
+    }
+
 }

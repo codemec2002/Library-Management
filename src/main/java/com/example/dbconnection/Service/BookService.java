@@ -26,6 +26,10 @@ public class BookService {
         return bookRepository.getBookById(id);
     }
 
+    public void deleteBookById(int id) throws SQLException {
+        bookRepository.deleteById(id);
+    }
+
     public String createTable(String table_name) throws SQLException {
         return bookRepository.createTable(table_name);
     }
